@@ -1,0 +1,37 @@
+{
+  "categorizedComponents": [
+    {
+      "components": [
+        {
+          "defaultExported": true,
+          "documentation": {
+            "examples": []
+          },
+          "info": {
+            "dirPath": "src/components/Api",
+            "implementation": {
+              "framework": "reactjs",
+              "lang": "javascript",
+              "path": "src/components/Api/Api.js"
+            },
+            "presets": []
+          },
+          "name": "Api",
+          "presets": [],
+          "properties": [],
+          "wrappers": []
+        }
+      ],
+      "name": "General"
+    }
+  ],
+  "name": "Api-component",
+  "vcs": {
+    "branchName": "master",
+    "commitHash": "441a11efd4d1fa902323766808c1bbdea61ea2bf",
+    "paths": {
+      "configPath": "/Users/evantrujillo/Documents/coding/work/merge-API-component/uxpin.config.js",
+      "projectRoot": "/Users/evantrujillo/Documents/coding/work/merge-API-component"
+    }
+  }
+}
