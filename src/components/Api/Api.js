@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
+import PropTypes from 'prop-types';
 import axios from "axios";
 
 
-export default function Api() {
+export default function Api(props) {
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -10,12 +11,12 @@ export default function Api() {
     //fetch data after render
     useEffect(() => {
         getData()
-    }, []);
+    },[props.api]);
 
 
 //fetch random user object data
 async function getData() {
-   try { const response = await axios("https://randomuser.me/api");
+   try { const response = await axios(props.api);
     setData(response.data)
     setLoading(false)
   } catch(e) {
@@ -35,6 +36,14 @@ return (
     <div>{`email: ${data.results[0].email}`}</div>
 </>
     );
+}
+
+Api.propTypes = {
+    api: PropTypes.string,
+}
+
+Api.defaultProps = {
+    api: "https://randomuser.me/api"
 }
 
 
